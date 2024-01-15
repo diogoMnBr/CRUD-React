@@ -16,7 +16,6 @@ const InputArea = styled.div`
         display: flex;
         flex-direction: column;
         cursor: text;
-        
     `;
 
 const Input = styled.div`
@@ -28,8 +27,7 @@ const Input = styled.div`
         color: black;
     `;
 
-    const Label = styled.label`
-    `
+    const Label = styled.label``;
 
     const Button = styled.button`
         padding: 10px;
@@ -39,28 +37,28 @@ const Input = styled.div`
         background-color: black;
         color: white;
         height: 42px;
-    `
+    `;
 
 const Form = ({ onEdit }) => {
     const ref = useRef();
 
     return (
-        <FormContainer ref={ref} >
+        <FormContainer ref={ref}>
             <InputArea>
                 <Label>Nome</Label>
-                <Input name="nome" />
+                <Input name="nome" placeholder="Digite seu nome" type="text" id="name" minlength="4" required/>
             </InputArea>
             <InputArea>
                 <Label>E-mail</Label>
-                <Input name="email" />
+                <Input name="email" type="email" />
             </InputArea>
             <InputArea>
                 <Label>Telefone</Label>
-                <Input name="phone" />
+                <Input name="phone" type="number"/>
             </InputArea>
             <InputArea>
                 <Label>Data de Nascimento</Label>
-                <Input name="dat_nas" type="date" defaultValue="2023-08-02"/>
+                <Input name="dat_nas" type="date" />
             </InputArea>
 
             <Button type="submit">SALVAR</Button>
